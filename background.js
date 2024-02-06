@@ -18,6 +18,8 @@ function toggleCss(tabId) {
         if (existingStyleElement) {
           existingStyleElement.remove();
         }
+        console.log('Resetting zoom to 100%');
+        document.body.style.zoom = "100%";
       },
     });
     isCssInjected = false;
@@ -26,6 +28,14 @@ function toggleCss(tabId) {
     chrome.scripting.insertCSS({
       target: { tabId: tabId },
       files: ["content.css"],
+    });
+    // Execute script to adjust zoom level to 80% and log action
+    chrome.scripting.executeScript({
+      target: {tabId: tabId},
+      function: () => {
+        console.log('Setting zoom to 150%');
+        document.body.style.zoom = "150%";
+      },
     });
     isCssInjected = true;
   }
