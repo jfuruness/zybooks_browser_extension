@@ -1,0 +1,30 @@
+#breadcrumbs {
+  display: none !important;
+}
+#pageTitleDiv {
+  display: none !important
+}
+
+/* Set the body and html elements to occupy 100% of viewport height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Remove scrollbars */
+}
+
+/* Make the iframe occupy the entire viewport */
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove the iframe border if you wish */
+}
+
+#main #content #containerdiv {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.container {
+    margin: 0 !important;
+    padding: 0 !important;
+}

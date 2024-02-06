@@ -1,0 +1,30 @@
+
+{
+  "manifest_version": 3,
+  "name": "My First Extension",
+  "version": "1.0",
+  "description": "This is the description for my first extension",
+  "icons": {
+    "128": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mycourses.qcc.edu/webapps/blackboard/content/contentWrapper.jsp*"],
+      "js": ["content.js"]
+    }
+  ]
+}
